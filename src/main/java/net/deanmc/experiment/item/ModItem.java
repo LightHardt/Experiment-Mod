@@ -1,16 +1,12 @@
 package net.deanmc.experiment.item;
 
 import net.deanmc.experiment.Experiment;
-import net.fabricmc.fabric.api.item.v1.CustomDamageHandler;
+import net.deanmc.experiment.item.custom.DowsingRodItem;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
-import net.minecraft.item.ItemStack;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
-
-import java.util.function.Consumer;
 
 public class ModItem {
 
@@ -19,6 +15,9 @@ public class ModItem {
 
     public static final Item SPECIAL_SWORD = registerItem("special_sword",
             new Item(new FabricItemSettings().group(ItemGroup.COMBAT)));
+
+    public static final Item DOWSING_ROD = registerItem("dowsing_rod",
+            new DowsingRodItem(new FabricItemSettings().group(ItemGroup.MISC)));
 
     private static Item registerItem(String name, Item item)
     {
